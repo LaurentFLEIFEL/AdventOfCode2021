@@ -3,12 +3,13 @@ package com.lfl.advent2021.days.day1;
 import com.lfl.advent2021.LinesConsumer;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.collections.api.list.primitive.MutableIntList;
-import org.eclipse.collections.impl.collector.Collectors2;
 import org.eclipse.collections.impl.factory.primitive.IntLists;
 import org.eclipse.collections.impl.list.Interval;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+import static org.eclipse.collections.impl.collector.Collectors2.collectInt;
 
 @Slf4j
 @Service
@@ -16,8 +17,8 @@ public class SonarInterpreter implements LinesConsumer {
     @Override
     public void consume(List<String> lines) {
         MutableIntList depths = lines.stream()
-                                     .collect(Collectors2.collectInt(Integer::parseInt,
-                                                                     IntLists.mutable::empty));
+                                     .collect(collectInt(Integer::parseInt,
+                                                         IntLists.mutable::empty));
 
         //part 1
         findNumberOfIncreased(depths);
