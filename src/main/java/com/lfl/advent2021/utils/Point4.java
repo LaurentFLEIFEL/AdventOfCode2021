@@ -1,6 +1,6 @@
 package com.lfl.advent2021.utils;
 
-record Point4(int x, int y, int z, int t) {
+public record Point4(int x, int y, int z, int t) {
     public static final Point4 ZERO = Point4.of(0, 0, 0, 0);
 
     public static Point4 of(int x, int y, int z, int t) {

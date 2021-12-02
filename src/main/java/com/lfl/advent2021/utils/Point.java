@@ -2,7 +2,7 @@ package com.lfl.advent2021.utils;
 
 import org.apache.commons.math3.complex.Complex;
 
-record Point(int x, int y) {
+public record Point(int x, int y) {
     public static final Point ZERO = Point.of(0, 0);
 
     public static Point of(int x, int y) {
