@@ -16,8 +16,8 @@ import java.util.Optional;
 @SpringBootApplication
 @Slf4j
 public class AdventApplication implements CommandLineRunner {
-    private static final String input = "day17-1.txt";
-    private static final String service = "day17";
+    private static final String input = "day21-1.txt";
+    private static final String service = "day21";
 
     private final Map<String, LinesConsumer> serviceByName;
 
